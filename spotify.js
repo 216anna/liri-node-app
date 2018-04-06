@@ -5,7 +5,7 @@ var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
 
 var spotifySearch = function (searchTerm) {
-spotify.search({ type: 'track', query: searchTerm, limit: 3 }, function (err, data) {
+spotify.search({ type: 'track', query: searchTerm, limit: 1 }, function (err, data) {
     if (err) {
         return console.log('Error occurred: ' + err);
     }
